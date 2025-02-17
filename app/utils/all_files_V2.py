@@ -442,8 +442,11 @@ def calculate_success_probability(student_data):
         }
     }
 
-    mention_boost = adjustments['mention'].get(student_data['Mention'], 0)
-    serie_boost = adjustments['serie'].get(student_data['Série'], 0)
+    # mention_boost = adjustments['mention'].get(student_data['Mention'], 0)
+    # serie_boost = adjustments['serie'].get(student_data['Série'], 0)
+
+    mention_boost = 0
+    serie_boost = 0
 
     # Calcul de la probabilité finale avec plus de nuance
     raw_probability = base_probability + mention_boost + serie_boost
