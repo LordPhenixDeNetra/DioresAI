@@ -66,13 +66,14 @@ def format_student_data(student_input: StudentInput) -> dict:
 def get_recommendation(probability: float, status: str) -> str:
     """Génère une recommandation basée sur la probabilité et le statut"""
     if probability >= 75:
-        return "Excellentes chances de réussite. Continuer avec la même rigueur."
+        return "Très grande chance de réussite. Votre profil est adéquat pour la formation."
     elif probability >= 50:
-        return "Bonnes chances de réussite. Un effort supplémentaire pourrait être bénéfique."
+        return "Grande chance de réussite. Votre profil est adéquat pour la formation."
     elif probability >= 25:
-        return "Risque d'échec modéré. Un soutien académique est recommandé."
+        return "Faible chance de réussite. Votre profil peut ne pas être adéquat pour la formation."
     else:
-        return "Risque d'échec élevé. Un accompagnement personnalisé est fortement recommandé."
+        return "Très faible chance de réussite. Votre profil n'est probablement pas adéquat pour la formation."
+
 
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_student(student: StudentInput):
