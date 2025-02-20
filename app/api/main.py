@@ -77,7 +77,7 @@ def get_recommendation(probability: float, status: str) -> str:
     else:
         return "Très faible chance de réussite. Votre profil n'est probablement pas adéquat pour la formation."
 
-
+# Debug
 def get_recommendation_V2(probability: float, probability_type: str) -> str:
     """Génère une recommandation basée sur la probabilité et le type de statut."""
 
