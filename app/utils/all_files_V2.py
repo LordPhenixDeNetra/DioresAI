@@ -467,6 +467,63 @@ def calculate_success_probability(student_data):
         }
     }
 
+
+def calculate_success_probability_V2(student_data):
+
+    prediction = predict_single_student(student_data)
+
+    # score = prediction['score']
+    # status = prediction['status']
+    orientation_probability = 0.0
+    success_probability = 0.0
+
+    if prediction['status'] == "NON ADMIS":
+        success_probability = 0.10  # 10 %
+    elif prediction['status'] == "DEUXIÈME SESSION":
+        success_probability = 0.50  # 50 %
+    elif prediction['status'] == "PASSABLE":
+        success_probability = 0.70  # 70 %
+    elif prediction['status'] == "MENTION SUPÉRIEURE":
+        success_probability = 0.95  # 95 %
+    else:
+        success_probability = 0.0
+
+    df = pd.read_csv("./app/data/Datasets/df_sorted_rank.csv", skipinitialspace=True)
+
+    rang = trouver_rang(prediction['score'], df)
+
+    orientation_probability = (800 - rang) / 800
+
+
+    return {
+        'statut_prédit': prediction['status'],
+        'score_prédit': prediction['score'],
+        'orientation_probability': orientation_probability * 100,
+        'success_probability': success_probability * 100
+    }
+
+def trouver_rang(score_pred: float, df: pd.DataFrame) -> int:
+    print(f"[DEBUG] score_pred : {score_pred} (type: {type(score_pred)})")
+
+    # Nettoyage des colonnes (suppression espaces, conversion numérique)
+    df["Score L1"] = pd.to_numeric(df["Score L1"].astype(str).str.strip(), errors="coerce")
+    df["Rang L1"] = pd.to_numeric(df["Rang L1"].astype(str).str.strip(), errors="coerce")
+
+    # Vérification des types et NaN
+    print("[DEBUG] Types des colonnes après conversion :", df.dtypes)
+    if df["Score L1"].isnull().any():
+        print("[DEBUG] Lignes avec 'Score L1' NaN :", df[df["Score L1"].isnull()])
+
+    # Tri et recherche
+    df_sorted = df.sort_values(by="Score L1", ascending=False).reset_index(drop=True)
+    scores_inferieurs = df_sorted[df_sorted["Score L1"] <= score_pred]
+
+    if not scores_inferieurs.empty:
+        rang = scores_inferieurs.iloc[0]["Rang L1"]
+        return int(rang) if pd.notnull(rang) else 0
+    return 0
+
+
 def main():
     # """
     # Fonction principale exécutant l'évaluation du modèle.
@@ -832,7 +889,7 @@ def main():
     #     print(f"Score prédit: {prediction['score']:.2f}")
     #     print(f"Modèle utilisé: {prediction['model']}")
 
-    # Exemple d'utilisation
+   # Exemple d'utilisation
     for i, student_data in enumerate(students_data, 1):
         probability = calculate_success_probability(student_data)
         print(f"\nÉtudiant {i}:")

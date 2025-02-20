@@ -68,3 +68,13 @@ class PredictionResponse(BaseModel):
     probability: float
     details: Dict[str, float]
     recommendation: str
+
+
+class PredictionResponseV2(BaseModel):
+    status: str
+    score: float
+    orientation_probability: float
+    success_probability: float
+    orientation_probability_message: str
+    success_probability_message: str
+
