@@ -1,0 +1,145 @@
+{
+    "Dakar": {
+        "Académie de Dakar": [
+            "PARCELLES ASSAINIES",
+            "DAKAR"
+        ],
+        "Académie de Pikine - Guédiawaye": [
+            "GUEDIAWAYE",
+            "MBAO",
+            "PIKINE",
+            "KEUR MASSAR"
+        ],
+        "Académie de Rufisque": [
+            "RUFISQUE",
+            "SEBIKOTANE",
+            "JAXAAY",
+            "TIVAOUANE PEULH"
+        ]
+    },
+    "Diourbel": {
+        "Académie de Diourbel": [
+            "DIOURBEL",
+            "BAMBEY SERERE",
+            "NDANGALMA"
+        ]
+    },
+    "Fatick": {
+        "Académie de Fatick": [
+            "NIAKHAR",
+            "PASSY",
+            "BASSOUL",
+            "DJILOR",
+            "FIMELA",
+            "DIOUROUP",
+            "TOUCAR",
+            "MBELACADIAO",
+            "DIOFIOR",
+            "COLOBANE"
+        ]
+    },
+    "Kaffrine": {
+        "Académie de Kaffrine": [
+            "KAFFRINE",
+            "KOUNGHEUL",
+            "MALEM HODAR"
+        ]
+    },
+    "Kaolack": {
+        "Académie de Kaolack": [
+            "NIORO",
+            "NDOFFANE",
+            "KAOLACK",
+            "KOUTAL",
+            "TAIBA NIASSENE",
+            "GUINGUINEO",
+            "NGANE SAER",
+            "MEDINA SABAKH",
+            "KAHONE",
+            "POROKHANE",
+            "GANDIAYE",
+            "WACK NGOUNA"
+        ]
+    },
+    "Kolda": {
+        "Académie de Kolda": [
+            "KOLDA",
+            "VELINGARA",
+            "PATA",
+            "DABO"
+        ]
+    },
+    "Kédougou": {
+        "Académie de Kédougou": [
+            "KEDOUGOU"
+        ]
+    },
+    "Louga": {
+        "Académie de Louga": [
+            "DAHRA",
+            "KEBEMER",
+            "DAROU MOUSTY",
+            "LOUGA",
+            "NDANDE",
+            "GUEOUL",
+            "LINGUERE"
+        ]
+    },
+    "Matam": {
+        "Académie de Matam": [
+            "MATAM",
+            "KANEL",
+            "OUROSSOGUI",
+            "ODOBERE",
+            "NDOULOUMADJI"
+        ]
+    },
+    "Saint-Louis": {
+        "Académie de Saint - Louis": [
+            "FANAYE",
+            "ROSSO SENEGAL",
+            "TASSINERE",
+            "SAINT LOUIS",
+            "PODOR",
+            "RICHARD TOLL"
+        ]
+    },
+    "Sédhiou": {
+        "Académie de Sédhiou": [
+            "DIATTACOUNDA"
+        ]
+    },
+    "Tambacounda": {
+        "Académie de Tambacounda": [
+            "TAMBACOUNDA",
+            "BAKEL",
+            "KIDIRA"
+        ]
+    },
+    "Thiès": {
+        "Académie de Thiès": [
+            "MEKHE",
+            "TAIBA NDIAYE",
+            "MBOUR",
+            "DAROU KHOUDOSS",
+            "THIES",
+            "TIVAOUANE",
+            "JOAL",
+            "SANDIARA",
+            "NGOUNDIANE",
+            "KHOMBOLE",
+            "FISSEL",
+            "THIADIAYE",
+            "SALY",
+            "POUT"
+        ]
+    },
+    "Ziguinchor": {
+        "Académie de Ziguinchor": [
+            "ZIGUINCHOR",
+            "KAFOUNTINE",
+            "BIGNONA",
+            "DJIBIDIONE"
+        ]
+    }
+}
